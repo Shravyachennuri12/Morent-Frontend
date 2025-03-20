@@ -117,7 +117,7 @@ const ProfilePage = () => {
         return false;
       }
   
-      const response = await axios.get(`http://localhost:5000/api/profile/${formData.userId}`, {
+      const response = await axios.get(`https://morent-backend-z08o.onrender.com/api/profile/${userData.user_id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -170,7 +170,7 @@ const ProfilePage = () => {
   
       let response;
       if (profileExists) {
-        response = await axios.put(`http://localhost:5000/api/profile/${formData.userId}`, updatedData, {
+        response = await axios.put(`https://morent-backend-z08o.onrender.com/api/profile/${userData.user_id}`, updatedData, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "multipart/form-data",
@@ -178,7 +178,7 @@ const ProfilePage = () => {
         });
         console.log("Profile updated successfully:", response.data);
       } else {
-        response = await axios.post("http://localhost:5000/api/profile", updatedData, {
+        response = await axios.post("https://morent-backend-z08o.onrender.com/api/profile/api/profile", updatedData, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "multipart/form-data",
@@ -201,7 +201,7 @@ const ProfilePage = () => {
   const handleDeleteProfile = async () => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/profile/${userData.user_id}`, {
+      await axios.delete(`https://morent-backend-z08o.onrender.com/api/profile/${userData.user_id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       onClose();

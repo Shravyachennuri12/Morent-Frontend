@@ -41,7 +41,7 @@ const ForgotPassword = () => {
         method === "phone" ? { phone: input } : { email: input };
   
       const response = await fetch(
-       "http://localhost:5000/api/auth/forgotpassword",
+       "https://morent-backend-z08o.onrender.com/api/auth/forgotpassword",
         {
           method: "POST",
           headers: {
@@ -72,7 +72,7 @@ const ForgotPassword = () => {
     setError("");
     try {
       const payload = method === "phone" ? { phone:  input, otp } : { email: input, otp };
-      const response = await axios.post("http://localhost:5000/api/auth/verifyotp", payload);
+      const response = await axios.post("https://morent-backend-z08o.onrender.com/api/auth/verifyotp", payload);
       setMessage(response.data.message);
       setTimeout(() => navigate("/reset-password", { state: { input, method } }), 1000);
     } catch (err) {
