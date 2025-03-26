@@ -7,10 +7,21 @@ import axios from "axios";
 import "../styles/ResetPassword.css";
 import logo from "../assets/LOGO.png";
 
+<<<<<<< HEAD
 const ResetPassword = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
   
+=======
+// Define the base API URL
+const API_BASE_URL = "http://localhost:5000/api/auth";
+// const API_BASE_URL = "https://morent-gjjg.onrender.com/api/auth";
+
+const ResetPassword = () => {
+  const navigate = useNavigate();
+  const { state } = useLocation();
+
+>>>>>>> 2384c91 (26/03/2025)
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -41,7 +52,11 @@ const ResetPassword = () => {
 
     setLoading(true);
     try {
+<<<<<<< HEAD
       await axios.post("https://morent-backend-z08o.onrender.com/api/auth/resetpassword", {
+=======
+      const response = await axios.post(`${API_BASE_URL}/resetpassword`, {
+>>>>>>> 2384c91 (26/03/2025)
         email: state?.input, // Ensures user email is used correctly
         newPassword,
       });
@@ -120,4 +135,8 @@ const ResetPassword = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ResetPassword;
+=======
+export default ResetPassword;
+>>>>>>> 2384c91 (26/03/2025)
