@@ -1,0 +1,327 @@
+/* ============================
+   Header Styling
+============================ */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* ============================
+   Left Section (Logo & Search)
+============================ */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+}
+
+.logo {
+  width: 130px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.08);
+}
+
+/* ============================
+   Search Box Styling
+============================ */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #f7f7f7;
+  border-radius: 30px;
+  padding: 10px 18px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.search-box:hover {
+  background: #e8f0fe;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  padding-left: 35px;
+  color: #333;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  font-size: 18px;
+  color: #666;
+  transition: color 0.3s ease-in-out;
+}
+
+.search-box:hover .search-icon {
+  color: #007bff;
+}
+
+.filter-icon {
+  margin-left: 12px;
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.filter-icon:hover {
+  transform: rotate(90deg);
+  color: #007bff;
+}
+
+/* ============================
+   Icons & Notifications
+============================ */
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f4f4f4;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-circle:hover {
+  background: #dceefb;
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* ============================
+   Notification Dot Animation
+============================ */
+.notification {
+  position: relative;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 9px;
+  height: 9px;
+  background: red;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.6;
+  }
+}
+
+/* ============================
+   Profile Dropdown Styling
+============================ */
+.settings-dropdown-container,
+.profile-dropdown-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-pic-container {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic-container:hover {
+  transform: scale(1.1);
+}
+
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* ============================
+   Profile Dropdown Animation
+============================ */
+.settings-dropdown,
+.profile-dropdown {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background: rgba(0, 0, 0, 0.367);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 200px;
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.settings-dropdown-container:hover .settings-dropdown,
+.profile-dropdown-container:hover .profile-dropdown {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+  color: #fff;
+}
+
+.dropdown-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+.dropdown-icon {
+  font-size: 18px;
+  color: #fff;
+  margin-right: 12px;
+}
+
+.dropdown-text {
+  font-size: 14px;
+  color: #fff;
+}
+
+.dropdown-text:hover {
+  background: rgba(0, 0, 0, 0.500);
+}
+
+
+/* ============================
+   Logout Button
+============================ */
+.logout-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #ff4d4d;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+  background: #cc0000;
+}
+
+/* ============================
+   Responsive Design
+============================ */
+@media screen and (max-width: 1024px) {
+  .header-container {
+    padding: 12px 4%;
+  }
+
+  .search-box {
+    max-width: 400px;
+  }
+
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .left-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-box {
+    max-width: 100%;
+  }
+
+  .icon-group {
+    gap: 12px;
+  }
+
+  .settings-dropdown,
+  .profile-dropdown {
+    min-width: 180px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 100px;
+  }
+
+  .search-box {
+    padding: 8px 12px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+
+  .icon-circle {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  .dropdown-item {
+    padding: 10px 12px;
+  }
+
+  .dropdown-text {
+    font-size: 12px;
+  }
+}
