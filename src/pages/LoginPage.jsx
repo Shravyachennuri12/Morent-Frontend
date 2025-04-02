@@ -11,7 +11,8 @@ import facebookIcon from "../assets/facebook.png";
 import appleIcon from "../assets/apple.png";
 import "../styles/Login.css";
 
-const API_BASE_URL = "http://localhost:5000/api/auth";
+// const API_BASE_URL = "http://localhost:5000/api/auth";
+const API_BASE_URL = "https://morent-backend-z08o.onrender.com/api/auth";
 
 const LoginPage = () => {
   const { loginWithRedirect } = useAuth0();

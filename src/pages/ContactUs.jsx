@@ -22,8 +22,8 @@ import defaultProfilePic from "../assets/profile.png";
 import "../styles/ContactUs.css";
 
 // Define the base API URL
-const API_BASE_URL = "http://localhost:5000/api";
-// const API_BASE_URL = "https://morent-gjjg.onrender.com/api";
+// const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://morent-backend-z08o.onrender.com/api";
 
 const ContactUs = () => {
   const [profilePic, setProfilePic] = useState(defaultProfilePic);

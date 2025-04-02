@@ -19,8 +19,8 @@ import defaultProfilePic from "../assets/profile.png";
 import "../styles/T&C.css";
 
 // Define the base API URL
-const API_BASE_URL = "http://localhost:5000/api";
-// const API_BASE_URL = "https://morent-gjjg.onrender.com/api";
+// const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://morent-backend-z08o.onrender.com/api";
 
 const TC = () => {
   // State management

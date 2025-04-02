@@ -32,8 +32,8 @@ const Header = ({ isGuest }) => {
         return;
       }
 
-      const response = await axios.get(`http://localhost:5000/api/profile/${user.user_id}`, {
-      // const response = await axios.get(`https://morent-gjjg.onrender.com/api/profile/${user.user_id}`, {
+      // const response = await axios.get(`http://localhost:5000/api/profile/${user.user_id}`, {
+      const response = await axios.get(`https://morent-backend-z08o.onrender.com/api/profile/${user.user_id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -41,8 +41,8 @@ const Header = ({ isGuest }) => {
 
       if (response.data && response.data.profilePic) {
         // Update the profile picture state with the fetched image
-        setProfilePic(`http://localhost:5000/uploads/${response.data.profilePic}`);
-        // setProfilePic(`https://morent-gjjg.onrender.com/uploads/${response.data.profilePic}`);
+        // setProfilePic(`http://localhost:5000/uploads/${response.data.profilePic}`);
+        setProfilePic(`https://morent-backend-z08o.onrender.com/uploads/${response.data.profilePic}`);
       }
     } catch (error) {
       console.error("Error fetching profile data:", error.response?.data || error.message);

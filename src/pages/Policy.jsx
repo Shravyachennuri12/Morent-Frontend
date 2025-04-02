@@ -19,8 +19,8 @@ import defaultProfilePic from "../assets/profile.png";
 import "../styles/Policy.css";
 
 // Define the base API URL
-const API_BASE_URL = "http://localhost:5000/api/auth";
-// const API_BASE_URL = "https://morent-gjjg.onrender.com/api/auth";
+// const API_BASE_URL = "http://localhost:5000/api/auth";
+const API_BASE_URL = "https://morent-backend-z08o.onrender.com/api/auth";
 
 const PP = () => {
   // State management

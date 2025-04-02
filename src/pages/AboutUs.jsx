@@ -16,8 +16,8 @@ import appstore from "../assets/app-store-badge.webp";
 // CONSTANTS & CONFIGURATION
 // ==============================================================================
 
-const API_BASE_URL = "http://localhost:5000/api";
-// const API_BASE_URL = "https://morent-gjjg.onrender.com/api";
+// const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://morent-backend-z08o.onrender.com/api";
 
 // ==============================================================================
 // DATA

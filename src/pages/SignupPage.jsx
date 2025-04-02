@@ -13,8 +13,8 @@ import "../styles/Login.css";
 import { useAuth0 } from "@auth0/auth0-react";
 
 // Define the base API URL
-const API_BASE_URL = "http://localhost:5000/api/auth";
-// const API_BASE_URL = "https://morent-gjjg.onrender.com/api/auth";
+// const API_BASE_URL = "http://localhost:5000/api/auth";
+const API_BASE_URL = "https://morent-backend-z08o.onrender.com/api/auth";
 
 const SignupPage = () => {
   const { loginWithRedirect } = useAuth0();
