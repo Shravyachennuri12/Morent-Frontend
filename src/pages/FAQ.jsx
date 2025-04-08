@@ -24,7 +24,7 @@ import "../styles/FAQ.css";
 
 // const API_BASE_URL = "http://localhost:5000/api";
 const API_BASE_URL = "https://morent-backend-z08o.onrender.com/api";
-
+ 
 const FAQ = () => {
   // User profile state
   const [profilePic, setProfilePic] = useState(defaultProfilePic);
